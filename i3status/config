@@ -1,0 +1,21 @@
+general {
+        output_format = "i3bar"
+        colors = false
+        markup = pango
+        interval = 1
+}
+
+
+order += "disk /"
+order += "tztime local"
+
+
+
+disk "/" {
+        format = "<span background='#50fa7b'> str </span><span background='#fafafa' > %free Free </span>"
+}
+
+tztime local {
+		format = "<span background='#ff79c6'> time </span><span background='#fafafa'> %a %H:%M </span><span>  </span>"
+		#format_time = "%a %-d %b %H:%M"
+}
